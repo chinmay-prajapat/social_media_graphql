@@ -1,4 +1,5 @@
 const { model, Schema } = require("mongoose");
+
 const postSchema = new Schema({
   body: String,
   username: String,
@@ -6,7 +7,7 @@ const postSchema = new Schema({
   comments: [
     {
       body: String,
-      usrrname: String,
+      username: String,
       createdAt: String,
     },
   ],
@@ -21,4 +22,5 @@ const postSchema = new Schema({
     ref: "users",
   },
 });
+
 module.exports = model("Post", postSchema);
